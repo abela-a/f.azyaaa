@@ -1,0 +1,107 @@
+body {
+    background-image: linear-gradient(
+        to right top,
+        #002453,
+        #003c8a,
+        #014caf,
+        #015acf,
+        #006bf4
+    );
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 425px;
+    border: 10px solid #006bf4;
+    margin: 60px auto 0 auto;
+    box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255),
+            rgba(255, 255, 255, 0.5)
+        ),
+        url("https://i.pinimg.com/564x/72/f7/ab/72f7abc2f6acf754630a336548995c1f.jpg");
+
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-color: #e6f0e6;
+}
+.card .text-container {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+.strikethrough {
+    text-decoration: line-through;
+}
+.card .text-container #head {
+    font-family: "Nobile", sans-serif;
+    font-size: 1.5em;
+    margin: 30px auto 10px auto;
+}
+.card p {
+    font-size: 1em;
+    line-height: 1.2;
+    font-family: "Nobile";
+    color: #331717;
+    font-style: italic;
+    text-align: center;
+    margin: 30px auto 0px auto;
+}
+.card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -10px 0px 0px -10px;
+    border: 10px solid #006bf4;
+    backface-visibility: hidden;
+    background-color: #006bf4;
+    /* background-image: url($cover-image);
+	 */
+    background-size: contain;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+}
+.card:hover .front {
+    transform: perspective(800px) rotateY(-170deg);
+    background-color: #41718d;
+}
+.card:hover .back {
+    transform: perspective(800px) rotateY(-170deg);
+    box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3),
+        inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-color: #d2dcd2;
+}
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #006bf4;
+    margin: -10px 0px 0px -10px;
+    backface-visibility: visible;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+    background-color: #e6f0e6;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.imgset {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -215px;
+}
+.imgset img {
+    box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+}

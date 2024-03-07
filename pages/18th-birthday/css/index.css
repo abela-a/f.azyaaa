@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing Script&family=Source+Code+Pro");
+body {
+    margin: 0;
+    background: #020202;
+}
+canvas {
+    display: block;
+}
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 5em;
+    font-weight: 200;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#button {
+    width: 150px;
+    height: 50px;
+    border-radius: 180px;
+    position: absolute;
+    left: calc(50% - 75px);
+    top: calc(50% - -125px);
+    background: linear-gradient(
+        60deg,
+        #f79533,
+        #f37055,
+        #ef4e7b,
+        #a166ab,
+        #5073b8,
+        #1098ad,
+        #07b39b,
+        #6fba82
+    );
+    cursor: pointer;
+    line-height: 12px;
+}
+
+#button:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 70%;
+    top: 15%;
+    left: 10%;
+    transition: 0.3s opacity ease-in-out;
+    filter: blur(15px);
+    opacity: 0;
+    background: linear-gradient(
+        60deg,
+        #f79533,
+        #f37055,
+        #ef4e7b,
+        #a166ab,
+        #5073b8,
+        #1098ad,
+        #07b39b,
+        #6fba82
+    );
+}
+
+#button:hover:before {
+    opacity: 1;
+    transition: 0.3s opacity ease-in-out;
+    filter: blur(25px);
+    background: linear-gradient(
+        60deg,
+        #f79533,
+        #f37055,
+        #ef4e7b,
+        #a166ab,
+        #5073b8,
+        #1098ad,
+        #07b39b,
+        #6fba82
+    );
+    /*143*/
+}
+
+#button:after {
+    content: "Take Your Gift!";
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    color: rgba(235, 235, 235, 1);
+    font-weight: bold;
+    z-index: 5;
+    position: absolute;
+    display: block;
+    border-radius: 180px;
+    width: 92%;
+    height: 80%;
+    top: 10%;
+    left: 4%;
+    background-color: rgb(19, 20, 22);
+}
